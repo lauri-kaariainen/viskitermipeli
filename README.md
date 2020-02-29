@@ -1,2 +1,0 @@
-# viskitermipeli
-Created with CodeSandbox
