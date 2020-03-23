@@ -1,6 +1,6 @@
 import "./style";
 import { render } from "preact";
-import { useState } from "preact/compat";
+import { useState } from "preact/hooks";
 import { Term } from "./components/Term.js";
 import { getSeededSampleOfN, shuffle, uniqueShallow } from "./helpers.js";
 import { getRealTerms } from "./getTerms.js";
@@ -99,7 +99,7 @@ function App() {
             Tai syötä tähän heidän siemenlukunsa:
             <input
               class="seedInput"
-              onChange={evt => setSeed(evt.target.value)}
+              oninput={evt => setSeed(evt.target.value)}
               value={seed}
             />
           </div>
@@ -113,7 +113,7 @@ function App() {
           <input
             class=""
             placeholder="Laphroaig..."
-            onChange={handleInputChange}
+            oninput={handleInputChange}
             value={inputState}
           />
           <SearchedList
